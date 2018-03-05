@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width = "wrap_content"
+    android:layout_height = "wrap_content"
+    android:layout_gravity = "center"
+    tools:context="com.example.hwi.logintest.MainActivity">
+
+    <LinearLayout
+        android:layout_width = "200dp"
+        android:layout_height = "wrap_content"
+        android:orientation = "vertical">
+
+        <EditText
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:hint = "아이디"
+            android:id="@+id/login_id" />
+
+        <EditText
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:hint = "비밀번호"
+            android:id="@+id/login_pw" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width = "80dp"
+        android:layout_height = "match_parent"
+        android:text = "로그인"
+        android:onClick="login_btn"/>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:text="회원가입"
+        android:id="@+id/login_join_btn"
+        android:onClick="join_btn"/>
+
+</android.support.constraint.ConstraintLayout>

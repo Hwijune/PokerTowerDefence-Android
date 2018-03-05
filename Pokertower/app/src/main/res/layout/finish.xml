@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/gameoverlay"
+    android:background="@drawable/gameover"
+    android:onClick="gameover">
+
+    <RelativeLayout
+        android:id="@+id/scorelay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/ranking"
+        android:visibility="invisible"
+        android:layout_marginTop="17dp">
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="100px"
+            android:layout_margin="10px"
+            android:text="INSERT YOUR NAME"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/scorename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id"
+            android:minWidth="500px"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/scorename"
+            android:background="@drawable/menuitem"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="insert"
+            android:text="ENTER" />
+
+        <ListView
+            android:id="@+id/rankingmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submit" />
+    </RelativeLayout>
+
+</LinearLayout>

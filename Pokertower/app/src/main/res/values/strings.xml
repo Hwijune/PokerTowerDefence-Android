@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pokertower</string>
+    <color name="bg">#AA0000FF</color>
+    <color name="rangecolor">#AAFF0000</color>
+    <color name='infobg'>#60000000</color>
+    <color name="gameoverbg">#000000</color>
+    <color name="rankingfg">#ffffff</color>
+</resources>

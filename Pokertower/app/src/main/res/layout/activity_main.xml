@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.hwi.pokertower.GameRun
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/gamerun"/>
+
+    <RelativeLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/range"
+            android:background="@drawable/circle"
+            android:visibility="invisible"
+            android:layout_width="500px"
+            android:layout_height="500px" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="185px"
+            android:paddingLeft="600px"
+            android:id="@+id/statusinfo"
+            android:visibility="invisible"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="6pt"
+            android:textColor="#FFFFFF"
+            android:text="dddd"/>
+        <TextView
+            android:id="@+id/checktile"
+            android:visibility="invisible"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:background="@drawable/buildpoint"/>
+        <Button
+            android:id="@+id/infobutton"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="30px"
+            android:onClick="info"
+            android:background="@drawable/infobutton"/>
+
+        <Button
+            android:id="@+id/menubutton"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_toLeftOf="@+id/infobutton"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="30px"
+            android:background="@drawable/menubutton"
+            android:onClick="menu"/>
+
+        <Button
+            android:id="@+id/buildbutton"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_toLeftOf="@+id/menubutton"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="30px"
+            android:onClick="buildbutton"
+            android:background="@drawable/buildbutton"/>
+
+        <Button
+            android:id="@+id/pausebutton"
+            android:onClick="pauseclick"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_toLeftOf="@+id/buildbutton"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="30px"
+            android:background="@drawable/pausebutton"/>
+
+        <Button
+            android:id="@+id/startbutton"
+            android:onClick="startclick"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_toLeftOf="@id/pausebutton"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="30px"
+            android:background="@drawable/startbutton"/>
+    </RelativeLayout>
+
+    <!--패그리기-->
+    <GridLayout
+        android:visibility="invisible"
+        android:id="@+id/pokergrid"
+        android:columnCount="4"
+        android:paddingTop="100px"
+        android:paddingLeft="500px"
+        android:useDefaultMargins="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/card1"
+            android:layout_width="360px"
+            android:layout_height="510px"
+            android:src="@drawable/c51"
+            />
+        <ImageView
+            android:id="@+id/card2"
+            android:layout_width="360px"
+            android:layout_height="510px"
+            android:src="@drawable/c51"
+            />
+        <ImageView
+            android:id="@+id/card3"
+            android:layout_width="360px"
+            android:layout_height="510px"
+            android:src="@drawable/c51"
+            />
+        <ImageView
+            android:id="@+id/card4"
+            android:layout_width="360px"
+            android:layout_height="510px"
+            android:src="@drawable/c51"
+            />
+        <ImageView
+            android:id="@+id/card5"
+            android:layout_width="360px"
+            android:layout_height="510px"
+            android:src="@drawable/c51"
+            />
+        <ImageView
+            android:id="@+id/card6"
+            android:layout_width="360px"
+            android:layout_height="510px"
+            android:src="@drawable/c51"
+            />
+        <ImageView
+            android:id="@+id/card7"
+            android:layout_width="360px"
+            android:layout_height="510px"
+            android:src="@drawable/c51"
+            />
+        <Button
+            android:onClick="closebutton"
+            android:textColor="#ffffff"
+            android:background="@color/infobg"
+            android:id="@+id/gridclosebutton"
+            android:layout_height="510px"
+            android:layout_width="360px"
+            android:text="닫기"/>
+    </GridLayout>
+
+    <!-- 인포메이션 레이아웃 -->
+    <GridLayout
+        android:visibility="visible"
+        android:id="@+id/infolay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/info"
+        android:layout_margin="150px"
+        android:onClick="infoclose">
+    </GridLayout>
+
+    <!-- 메뉴 레이아웃 -->
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/menulay"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="50px"
+        android:layout_marginTop="230px">
+
+        <Button
+            android:id="@+id/gamereturn"
+            android:background="@drawable/menuitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESUME"
+            android:onClick="menuclose"
+            android:textColor="#ffffff"
+            android:layout_marginTop="350px"
+            android:layout_margin="20px"/>
+
+        <Button
+            android:id="@+id/soundbutton"
+            android:background="@drawable/menuitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="soundonoff"
+            android:textColor="#ffffff"
+            android:text="SOUND OFF"
+            android:layout_margin="20px"/>
+
+        <Button
+            android:layout_margin="20px"
+            android:id="@+id/mainreturn"
+            android:textColor="#ffffff"
+            android:background="@drawable/menuitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MAIN"
+            android:onClick="mainreturn"/>
+
+    </LinearLayout>
+</FrameLayout>
